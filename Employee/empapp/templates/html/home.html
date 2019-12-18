@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "html/base.html" %}
+
+{% block body_block %}
+
+<div class="container" align="center">
+
+<h1>All Employee Informations</h1>
+{% if emp_data %}
+<table >
+  <thead>
+    <th>Employee No</th>
+    <th>Employee NAME</th>
+    <th>Employee SALARY</th>
+    <th>Employee ADDRESS</th>
+    <th colspan="2">Action</th>
+  </thead>
+  {% for i in emp_data %}
+  <tr>
+    <td>{{i.eno}}</td>
+    <td>{{i.ename}}</td>
+    <td>{{i.esal}}</td>
+    <td>{{i.eaddr}}</td>
+    <td> <a href="/update/{{i.id}}">Update</a> <a href="/delete/{{i.id}}">Delete</a> </td>
+  </tr>
+
+  {% endfor %}
+
+</table><br><br>
+<a href="/insert" class="btn btn-primary">Insert New Record</a><br><br>
+{% else %}
+<p>Employee Information not found...</p>
+
+{% endif %}
+
+</div>
+{% endblock  %}

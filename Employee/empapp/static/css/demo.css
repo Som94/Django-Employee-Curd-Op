@@ -1,0 +1,17 @@
+body{
+
+  background: url(https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1503&q=80);
+}
+
+h1{
+  color: Blue;
+}
+table,td,th{
+  border: 1px solid pink;
+}
+
+td{
+  color: red;
+}
+th{
+  color: green;
